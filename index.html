@@ -3,148 +3,84 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Para Minha Namorada Linda ❤️</title>
+    <title>Para Alguém Especial</title>
     <style>
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background-color: #ffe6e6;
-            color: #4a4a4a;
-            margin: 0;
-            padding: 0;
+            background: linear-gradient(135deg, #ffe5ec, #ffc2d1);
             display: flex;
-            flex-direction: column;
+            justify-content: center;
             align-items: center;
+            height: 100vh;
+            margin: 0;
+            color: #4a4a4a;
         }
 
-        header {
-            background-color: #ff4d6d;
-            color: white;
-            width: 100%;
+        .card {
+            background: white;
+            padding: 30px;
+            border-radius: 20px;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
             text-align: center;
-            padding: 2rem 0;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            max-width: 400px;
+            width: 90%;
         }
 
         h1 {
-            margin: 0;
-            font-size: 2.5rem;
+            color: #ff477e;
+            font-size: 24px;
+            margin-bottom: 20px;
         }
 
-        .container {
-            max-width: 800px;
-            padding: 2rem;
-            text-align: center;
-        }
-
-        .carta {
-            background: white;
-            padding: 2rem;
-            border-radius: 15px;
-            box-shadow: 0 10px 20px rgba(0,0,0,0.05);
-            margin-bottom: 2rem;
-            border-left: 5px solid #ff4d6d;
-        }
-
-        .carta p {
-            font-size: 1.2rem;
+        p {
+            font-size: 16px;
             line-height: 1.6;
+            margin-bottom: 25px;
         }
 
-        .fotos {
-            display: flex;
-            justify-content: center;
-            gap: 15px;
-            flex-wrap: wrap;
-            margin-bottom: 2rem;
+        .heart {
+            font-size: 50px;
+            color: #ff477e;
+            animation: pulse 1.5s infinite;
+            margin-bottom: 15px;
         }
 
-        .foto-placeholder {
-            width: 200px;
-            height: 200px;
-            background-color: #ddd;
-            border-radius: 10px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 0.9rem;
-            color: #666;
-            border: 3px solid white;
-            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.15); }
+            100% { transform: scale(1); }
         }
 
-        button {
-            background-color: #ff4d6d;
+        .btn {
+            background-color: #ff477e;
             color: white;
             border: none;
-            padding: 12px 24px;
-            font-size: 1.1rem;
+            padding: 12px 25px;
             border-radius: 25px;
+            font-size: 16px;
             cursor: pointer;
-            transition: transform 0.2s, background-color 0.2s;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            transition: background 0.3s;
+            text-decoration: none;
+            display: inline-block;
         }
 
-        button:hover {
-            background-color: #ff1a43;
-            transform: scale(1.05);
-        }
-
-        #surpresa {
-            margin-top: 1.5rem;
-            font-size: 1.3rem;
-            font-weight: bold;
-            color: #ff4d6d;
-            min-height: 30px;
-        }
-
-        footer {
-            margin-top: auto;
-            padding: 1rem;
-            font-size: 0.9rem;
-            color: #888;
+        .btn:hover {
+            background-color: #ff0a54;
         }
     </style>
 </head>
 <body>
 
-    <header>
-        <h1>Para o Amor da Minha Vida ❤️</h1>
-    </header>
+    <div class="card">
+        <div class="heart">❤️</div>
+        <h1>Para [Nome Dela],</h1> 
+        
+        <p>
+            Às vezes, a gente não precisa de muito tempo para saber que alguém é especial. Mesmo que a gente não tenha uma história longa juntos ainda, o meu carinho por você só cresce a cada dia. Queria que você soubesse o quanto você me faz bem.
+        </p>
 
-    <div class="container">
-        <section class="carta">
-            <h2>Oi, meu amor!</h2>
-            <p>Escrevi esta página para te lembrar o quanto você é especial para mim. Cada momento ao seu lado é incrível e eu tenho muita sorte de ter você na minha vida. Obrigado por ser essa pessoa maravilhosa, engraçada e companheira. Te amo daqui até o infinito!</p>
-        </section>
-
-        <h3>Nossos Momentos ✨</h3>
-        <section class="fotos">
-            <div class="foto-placeholder">Sua Foto Favorita 1</div>
-            <div class="foto-placeholder">Um Momento Engraçado</div>
-            <div class="foto-placeholder">Nosso Melhor Date</div>
-        </section>
-
-        <button onclick="mostrarSurpresa()">Clique para uma surpresa</button>
-        <div id="surpresa"></div>
+        <a href="https://wa.me/SEUNUMERO" class="btn" target="_blank">Vamos conversar?</a>
     </div>
 
-    <footer>
-        Feito com ❤️ por Você
-    </footer>
-
-    <script>
-        const motivos = [
-            "Eu amo o seu sorriso! Base de tudo.",
-            "Amo o jeito que você me abraça.",
-            "Amo como a gente se diverte junto, até fazendo nada.",
-            "Você tem o coração mais lindo do mundo!",
-            "Amo o seu cheiro e o seu carinho."
-        ];
-
-        function mostrarSurpresa() {
-            const numAleatorio = Math.floor(Math.random() * motivos.length);
-            document.getElementById('surpresa').innerText = motivos[numAleatorio];
-        }
-    </script>
 </body>
 </html>
